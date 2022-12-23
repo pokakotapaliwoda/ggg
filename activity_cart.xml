@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    tools:context=".CartActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your cart:"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        />
+
+    <TextView
+        android:id="@+id/cart_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="total:"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cart_reset"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="empty cart"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/cart_buy"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="buy"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
